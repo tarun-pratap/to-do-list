@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background: #000430;
+    --secondaryBackground: #171c48;
+    --text: #fff;
+    --purple: #828dff;
+    --teal: #24feee;
+}
+
+body{
+    color: var(--text);
+    font-family: 'Roboto', sans-serif;
+    background: url("pexels-mart-production-7718707.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 120px auto;
+    width: 450px;
+    height: 700px;
+    min-height: 450px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(15px) saturate(400%);
+    -webkit-backdrop-filter: blur(15px) saturate(200%);
+    border: 2px solid rgba(72, 61, 135, 0.8);
+    border-radius: 15px; /* Slightly more rounded corners for a smoother look */
+    box-shadow: 0 80px 32px rgba(0, 0, 0, 0.37); 
+    overflow: hidden; /* Ensures the content inside is clipped */
+    max-width: 500px;
+    position: relative;
+}
+
+/* Add a shiny effect */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 40%, rgba(255, 255, 255, 0.0) 100%);
+    transform: translateX(-50%) skewX(-30deg);
+    transition: 0.75s;
+}
+
+.container:hover::before {
+    transform: translateX(-50%) skewX(-30deg) translateX(100%);
+}
+
+
+.container h1, .container p {
+    color: #fff; /* White text color for contrast */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* More pronounced text shadow for 3D effect */
+}
+
+.statistics{
+    padding: 10px;
+    border-radius: 20px;
+    /* border: 2px solid #483d87a1; */
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+}
+#numbers {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(217, 213, 213);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FF0080;
+    position: relative; 
+}
+
+#numbers::before {
+    content: "";
+    position: absolute;
+    top: -4px; 
+    left: -4px; 
+    right: -4px; 
+    bottom: -4px; 
+    border-radius: 50%;
+    background: linear-gradient(45deg, #FF0080, #24feee);
+    z-index: -1;
+}
+
+#numbers::after {
+    content: "";
+    position: absolute;
+    top: -8px; 
+    left: -8px; 
+    right: -8px; 
+    bottom: -8px; 
+    border-radius: 50%;
+    background: linear-gradient(45deg, #24feee, #FF0080);
+    z-index: -2;
+}
+
+
+#progressBar{
+    width: 100%;
+    height: 10px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#progress{
+    width: 0%;
+    height: 10px;
+    background-color: #FF0080;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.details{
+    width: 100%;
+}
+
+form{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+
+
+input {
+    flex: 1;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid black;
+    border-radius: 0;
+    outline: none;
+    color: white;
+    margin-bottom: 20px; 
+    font-size: 18px;
+}
+
+
+input::placeholder{
+    color:#483d87d3;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(217, 213, 213);
+    color: #FF0080;
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+
+.empty-image {
+    margin: 55px auto 0;
+    display: block;
+}
+
+/* .task-list-container{
+    height: 300px;
+    overflow: overlay;
+} */
+
+.task-list-container{
+    width: 100%;
+    height: 300px;
+    overflow: overlay;
+    margin-top: 20px;
+}
+
+.task-list-container::-webkit-scrollbar-track  {
+    background: #292d54;
+    border-radius: 20px
+}
+  
+.task-list-container::-webkit-scrollbar  {
+    width: 0;
+}
+  
+.task-list-container:hover::-webkit-scrollbar  {
+    width: 7px;
+}
+  
+.task-list-container::-webkit-scrollbar-thumb  {
+    background: #000430;
+    border-radius: 20px;
+}
+
+.taskItem{
+    display: flex;
+    background-color: rgb(16, 16, 41);
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.taskItem:hover{
+    background-color: rgb(97, 97, 131);
+}
+
+#task-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    list-style: none;
+}
+
+.taskItem img{
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task input{
+    width: 20px;
+    height: 20px;
+}
+
+.completed p{
+    text-decoration: line-through;
+    color: rgb(24, 243, 134);
+}
+
+.filters{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.filter{
+    padding: 10px 12px;
+    border-radius: 100px;
+    border: 3px solid #090520b9;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.filter.active, .filter:hover{
+    background-color: rgb(16, 16, 41);
+}
+
+.delete-all{
+    display: flex;
+    padding: 10px 15px;
+    border-radius: 100px;
+    border: 2px solid #483d87a1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.delete-all:hover{
+    background-color: rgb(16, 16, 41);
+}
+
