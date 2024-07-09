@@ -1,9 +1,8 @@
-**Name**: RIYA ARORA   
-**Company**: CODTECH IT SOLUTIONS   
-**ID**: CT12DS422     
+**Name**:Tarun Pratap  
+**Company**: Unified mentor pvt ltd   
+**ID**: UMIP12670     
 **Domain**: Web Development   
-**Duration**: June to July 2024    
-**Mentor**: Mohammed Muzammil Ahmed  
+**Duration**: June to July 2024      
 
 
 # PROJECT OVERVIEW
@@ -11,8 +10,7 @@
 ## To-do-Web-Application
 Welcome to the To-Do Web Application! This project is a simple yet effective task management tool built with HTML, CSS, and JavaScript.
 
-<img width="1438" alt="image" src="https://github.com/riyaarora03/CODTECH-task-1/blob/a7b262018864376ec2181f5ce8d97d0af967abf7/screenshot.png">
-Live Demo: https://to-do-web-application-eight.vercel.app/
+Live Demo: 
 
 ### CRUD OPERATIONS:
     CREATE: Add new tasks effortlessly.
@@ -39,13 +37,6 @@ Persistent Storage: Tasks are saved in local storage, ensuring they persist even
 #### Development Tools
 **Visual Studio Code**: A code editor used for development.   
 
-## RUN LOCALLY
-Clone the project
-
-```bash
-  git clone https://github.com/yourusername/todo-web-application.git
-```
-
 Go to the project directory
 
 ```bash
@@ -54,5 +45,3 @@ Go to the project directory
 Open the index.html file in your preferred web browser.   
 That's it! The application should now be running locally on your machine.
 
-## Contributing
-Contributions are welcome! If you have any suggestions or improvements, feel free to submit a pull request.
